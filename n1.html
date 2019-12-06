@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Template</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+  background-color: #B0E0E6;
+  padding: 5px;
+  text-align: left;
+  font-size: 25px;
+  color: green;
+  height:100px;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 30%;
+  height: 400px; /* only for demonstration, should be removed */
+  background: #ccc;
+  padding: 20px;
+}
+
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+ 
+
+article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  background-color: #f1f1f1;
+  height: 400px; /* only for demonstration, should be removed */
+}
+
+/* Clear floats after the columns */
+section:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: #708090;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+.header-right {
+  float: right;
+  color:green;
+}
+.header-left {
+  float: left;
+}
+.header .search-container button {
+  float: right;
+  padding: 6px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.header .search-container button:hover {
+  background: #ccc;
+}
+@media screen and (max-width: 600px) {
+  .header .search-container {
+    float: none;
+  }
+  .header a, .header input[type=text], .header .search-container button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .header input[type=text] {
+    border: 1px solid #ccc;  
+  }
+}
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+</style>
+</head>
+<body>
+
+<header>
+
+<div class="header">
+  
+  <img src="gmr.jpg" style="width:200px;height:70px;">
+  <div class="header-right">
+    <a class="active" href="#home" style="color:red">Home</a>
+    <a href="#contact" style="color:red">Contact</a>
+    <a href="#about" style="color:red">About</a>
+    <a href="#login" style="color:red">Login</a>
+    <a href="#signup" style="color:red" style="padding-left:160px">Signup</a>
+     
+  </div>
+</div>
+</header>
+
+<section>
+  <nav>
+
+<h1>GMR</h1>
+    <p>Welcome to GMR Institute of Technology (GMRIT). Established in the year 1997 by GMR Varalakshmi Foundation – the corporate social responsibility arm of GMR Group    – GMRIT offers aspiring engineers high quality technical education</p>
+    <p>Located in Rajam, Srikakulam district of Andhra Pradesh, GMRIT provides its learning community state-of-the-art facilities, infrastructure and a competent faculty. The Institute encourages collaborative learning between industry and academia as a means of reinforcing its curriculum with practical and real world experiences</p>
+  </nav>
+  
+  <article>
+ <p>images</p>
+    
+  </article>
+</section>
+
+<footer>
+  <p>ContactDetails</p>
+</footer>
+
+</body>
+</html>
